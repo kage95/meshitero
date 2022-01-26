@@ -1,0 +1,2 @@
+$('#favorite_buttons_<%= @post_image.id %>').html("<%= escape_javascript(render partial: "favorites/favorite",locals: {post_image: @post_image}) %>");
+<!--alert('いいね解除できている');-->
