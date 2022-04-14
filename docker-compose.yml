@@ -14,7 +14,7 @@ services:
     # 名前付きボリュームでDBのデータを永続化
     # [データボリューム名:コンテナ内のパス]
     volumes:
-      - mysql_data:/etc/mysql/conf.d
+      - ./db/mysql_data:/var/lib/mysql
   web:
     # Dockerfileのパスをカレントディレクトリに指定
     build: .
@@ -56,5 +56,4 @@ services:
 # 名前付きボリュームを使うときはトップレベルでもvolumesでデータボリューム名を定義する
 volumes:
   # db:volumes:で作成したボリューム名を記述
-  mysql_data:
   public-data: # 追加
